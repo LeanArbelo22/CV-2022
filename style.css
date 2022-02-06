@@ -397,7 +397,7 @@ h4 {
 
 .proyects .course img {
     width: 100%;
-    /* height: 210px; */
+    height: 210px;
     border: var(--border-style-1) var(--border-color-dark);
     transition: var(--tran-02);
 }
