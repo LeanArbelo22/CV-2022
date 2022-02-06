@@ -1,0 +1,417 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Montserrat:wght@500;600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif; /* Poppins, Lato, Montserrat */
+    margin: 0;
+    padding: 0;
+    /* position: relative; */
+}
+
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 17px;
+
+    /* colors */
+    --background-color-1: #130018;
+    --background-color-2: #FFFFFF;
+
+    --border-color-light: #65705ae2; /* #360F41CB */
+    --border-color-dark: #DDFFAA;
+
+    --title-color-1: #C9F587; /* dark backgrounds */
+    --title-color-2: #FABAD3; /* dark backgrounds */
+    --title-color-3: #D53053; /* light // CHANGE PLS*/
+    --title-color-4: #184d52; /* light */
+
+    --text-color-1: #F6FAF0; /* dark backgrounds */
+    --text-color-2: #0C0C0C; /* light backgrounds */
+    --text-color-3: #5F5A5A; /* seccondary texts */
+    --text-color-4: #3B3636; /* seccondary text also */
+
+    --icon-color: #210129E0;
+
+    /* borders */
+    --border-style-1: 2px solid;
+    --border-style-2: 1px solid;
+    --circular-style: 50%;
+    /* for the following border-image variables it's necessary use
+    -moz-border-image: -moz-linear-gradient(top...)
+    -webkit-border-image: -webkit-linear-gradient(top...)
+    also border-image-slice: 1 */
+    --border-gradient-y: 0deg, rgba(255,255,255,1) 0%, var(--border-color-light) 50%, rgba(255,255,255,1) 100%;
+    --border-gradient-x: 90deg, rgba(255,255,255,1) 0%, var(--border-color-light) 20%, var(--border-color-light) 80%, rgba(255,255,255,1) 100%;
+    
+    /* sizes, spacing */
+    --font-normal: 1rem; /* 17px */
+    --font-small: 0.9rem;
+    --font-smaller: 0.8rem; /* or 0.85? */
+    --font-big: 1.1rem;
+    --font-bigger: 1.2rem;
+
+    --margin-1: 10px; /* change in the future for 5px and 10px for better code reading */
+    --margin-2: 20px;
+
+    --padding-1: 4px;
+    --padding-2: 8px;
+
+    /* font weight */
+    --fw-regular: 500;
+    --fw-medium: 600;
+    --fw-semi: 700;
+    --fw-bold: 800;
+    --fw-extra: 900;
+
+    /* boxes shadows // not sure about this */
+    --shadow-effect-blur: 15px 5px;
+
+    /* transitions */
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+}
+
+body {
+    background-color: var(--background-color-2);
+    color: var(--text-color-2);
+
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; not really necessary */
+    align-items: center;
+}
+
+a {
+    color: var(--text-color-2);
+}
+
+h1 {
+    font-weight: var(--fw-semi);
+}
+
+h2 {
+    font-size: var(--font-big);
+    font-weight: var(--fw-bold);
+    margin-bottom: calc(var(--margin-1) / 3);
+}
+
+h3 {
+    font-size: var(--font-small);
+    font-weight: var(--fw-semi);
+    margin: calc(var(--margin-1) * 0.8) 0px;
+}
+
+h4 {
+    font-weight: var(--fw-semi);
+    font-size: var(--font-smaller);
+    color: var(--text-color-4);
+}
+
+/*  presentation  */
+.presentation { /* full header */
+    width: 100%;
+    height: 200px;
+    background-color: var(--background-color-1);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0px 40px;
+
+    position: relative;
+    top: 0;
+
+    /* box-shadow: 0 0 var(--shadow-effect-blur) var(--background-color-1); */
+}
+
+.presentation .image { /* image container */
+    width: 145px;
+    height: 145px;
+    padding: var(--padding-1);
+    background-image: linear-gradient(180deg, #e74c3c, #e67e22, #f1c40f, #2ecc71, #16a085, #3498db, #9b59b6);
+    border-radius: var(--circular-style);
+
+    transition: var(--tran-02);
+}
+
+.presentation .image:hover {
+    transform: scale(1.2);
+    padding: calc(var(--padding-1) / 2);
+}
+
+.image img { /* profile image */
+    width: 100%;
+    height: 100%;
+
+    /* border: var(--border-style-2) #FFF; */
+    border-radius: var(--circular-style);
+
+    object-fit: cover;
+}
+
+.presentation .info { /* text container of the header */
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.info .titles {
+    line-height: 30px;
+    margin-bottom: var(--margin-1);
+}
+
+.titles .name {
+    color: var(--title-color-1);
+}
+
+.titles .profession {
+    color: var(--title-color-2);
+    text-transform: uppercase;
+}
+
+.description .about-me {
+    line-height: 1rem;
+    font-size: var(--font-smaller);
+    font-weight: var(--fw-regular);
+    color: var(--text-color-1);
+    text-align: justify;
+}
+
+/* resume */
+.resume {
+    width: 85%;
+    display: grid; 
+    grid-template-columns: 220px 1fr 1fr; 
+    grid-template-rows: 30% 20% 50%; 
+    gap: 5px 10px; 
+    grid-template-areas: 
+    "skills contact contact"
+    "skills studies experience"
+    "skills proyects proyects";
+}
+
+.resume h2 {
+    color: var(--title-color-3);
+}
+
+.resume h3 {
+    color: var(--title-color-4);
+}
+
+.resume .content { /* each section of the resume */
+    padding: calc(var(--padding-2) * 2);
+} 
+
+/* skills */
+.resume .skills {
+   /* width: 220px;  this is declared on the grid-template-column */
+   height: fit-content;
+   
+   grid-area: skills;
+   
+   border-right: 1px solid transparent;
+   -webkit-border-image: -webkit-linear-gradient(var(--border-gradient-y));
+   border-image: linear-gradient(var(--border-gradient-y));
+   border-image-slice: 1;
+}
+
+.skills ul li { 
+    list-style: none;
+    
+    font-size: var(--font-smaller);
+    font-weight: var(--fw-medium);
+
+    margin: calc(var(--margin-1) * 0.6);
+
+    display: flex; /* as the li elements contain images and some icons */
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center; /* align li whith img (icons)*/
+}
+
+.skills li:not(.lang):hover { /* all except language */
+    font-weight: var(--fw-semi);
+}
+
+.skills h3:last-of-type {
+    margin-top: var(--margin-2);
+}
+
+.skills ul li img { /* image icons */
+    height: 25px;
+    margin-right: calc(var(--margin-1) * 0.6);
+}
+
+.skills ul li i { /* heart icons */
+    color: rgb(233, 30, 30);
+    margin-left: var(--margin-1);
+    transition: var(--tran-03);
+}
+
+@keyframes beats { /* for the heart beat animation */
+    from { transform: none; }
+    50% { transform: scale(1.2); }
+    to { transform: none; }
+}
+
+.skills i:hover{
+    animation: beats 0.7s infinite;
+}
+
+/* contact and social medias */
+.resume .contact {
+    grid-area: contact;
+
+    font-size: var(--font-small);
+
+    border-bottom: 1px solid transparent;
+    -webkit-border-image: -webkit-linear-gradient(var(--border-gradient-x));
+    border-image: linear-gradient(var(--border-gradient-x));
+    border-image-slice: 1;
+}
+
+.contact .information {
+    font-size: var(--font-normal);
+
+    margin: var(--margin-2);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.information i {
+    font-size: var(--font-big);
+    color: var(--icon-color);
+}
+
+.information article {
+    font-weight: var(--fw-regular);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+
+    margin: calc(var(--margin-1) / 2);
+}
+
+.information p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.information a {
+    text-decoration: none;
+    border-bottom: 0.5px solid #2101294b;
+}
+
+.information .location p {
+    margin: 0px calc(var(--margin-2) * 1.2);
+}
+
+.information .social p {
+    margin: 0px var(--margin-1);
+}
+
+.information .social a i {
+    font-size: calc(var(--font-bigger) * 2);
+    color: var(--icon-color);
+    margin: var(--margin-2);
+    
+    transition: var(--tran-02);
+}
+
+.social a i:hover {
+    color: #3c024b7b;
+    transform: scale(1.05);
+}
+
+.social a {
+    border-bottom: 0;
+}
+
+/* experience and studies */
+.resume .studies {
+    grid-area: studies;
+}
+
+.resume .experience {
+    grid-area: experience;
+    font-size: var(--font-small);
+}
+
+.studies .date {
+    font-size: var(--font-smaller);
+    color: var(--text-color-3);
+}
+
+.studies .title {
+    font-size: var(--font-normal);
+    font-weight: var(--fw-medium);
+    color: var(--text-color-4);
+}
+
+.studies .college {
+    font-size: var(--font-small);
+    font-weight: var(--fw-regular);
+    color: var(--text-color-3);
+}
+
+/* college proyects */
+.resume .proyects {
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+
+    grid-area: proyects;
+
+    border-top: 1px solid transparent;
+    -webkit-border-image: -webkit-linear-gradient(var(--border-gradient-x));
+    border-image: linear-gradient(var(--border-gradient-x));
+    border-image-slice: 1;
+}
+
+.proyects .final-proyects {
+    width: 100%;
+    height: 290px;
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; this will work with a width superior to 100%*/
+}
+
+.final-proyects h4 {
+    text-align: center;
+    margin-bottom: calc(var(--margin-1) / 2);
+}
+
+.proyects .course {
+    margin: var(--margin-1);
+}
+
+.proyects .course img {
+    width: 100%;
+    /* height: 210px; */
+    border: var(--border-style-1) var(--border-color-dark);
+    transition: var(--tran-02);
+}
+
+.proyects .course img:hover {
+    transform: scale(1.02);
+    outline: var(--border-style-1) var(--border-color-dark);
+}
+
+.proyects .course p {
+    font-size: calc(var(--font-smaller) - 2px);
+}
+
+.proyects .course span {
+    font-size: calc(var(--font-small) - 2px);
+    font-weight: var(--fw-medium);
+}
