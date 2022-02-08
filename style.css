@@ -619,7 +619,7 @@ h4 {
     }
     
     .final-proyects h4 {
-        margin: calc(var(--margin-1));
+        margin: var(--margin-1);
     }
     
     .proyects .course {
