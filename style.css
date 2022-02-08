@@ -205,62 +205,6 @@ h4 {
     padding: calc(var(--padding-2) * 2);
 } 
 
-/* skills */
-.resume .skills {
-   /* width: 220px;  this is declared on the grid-template-column */
-   height: fit-content;
-   
-   grid-area: skills;
-   
-   border-right: 1px solid transparent;
-   -webkit-border-image: -webkit-linear-gradient(var(--border-gradient-y));
-   border-image: linear-gradient(var(--border-gradient-y));
-   border-image-slice: 1;
-}
-
-.skills ul li { 
-    list-style: none;
-    
-    font-size: var(--font-smaller);
-    font-weight: var(--fw-medium);
-
-    margin: calc(var(--margin-1) * 0.6);
-
-    display: flex; /* as the li elements contain images and some icons */
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center; /* align li whith img (icons)*/
-}
-
-.skills li:not(.lang):hover { /* all except language */
-    font-weight: var(--fw-semi);
-}
-
-.skills h3:last-of-type {
-    margin-top: var(--margin-2);
-}
-
-.skills ul li img { /* image icons */
-    height: 25px;
-    margin-right: calc(var(--margin-1) * 0.6);
-}
-
-.skills ul li i { /* heart icons */
-    color: rgb(233, 30, 30);
-    margin-left: var(--margin-1);
-    transition: var(--tran-03);
-}
-
-@keyframes beats { /* for the heart beat animation */
-    from { transform: none; }
-    50% { transform: scale(1.2); }
-    to { transform: none; }
-}
-
-.skills i:hover{
-    animation: beats 0.7s infinite;
-}
-
 /* contact and social medias */
 .resume .contact {
     grid-area: contact;
@@ -334,6 +278,62 @@ h4 {
 
 .social a {
     border-bottom: 0;
+}
+
+/* skills */
+.resume .skills {
+   /* width: 220px;  this is declared on the grid-template-column */
+   height: fit-content;
+   
+   grid-area: skills;
+   
+   border-right: 1px solid transparent;
+   -webkit-border-image: -webkit-linear-gradient(var(--border-gradient-y));
+   border-image: linear-gradient(var(--border-gradient-y));
+   border-image-slice: 1;
+}
+
+.skills ul li { 
+    list-style: none;
+    
+    font-size: var(--font-smaller);
+    font-weight: var(--fw-medium);
+
+    margin: calc(var(--margin-1) * 0.6);
+
+    display: flex; /* as the li elements contain images and some icons */
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center; /* align li whith img (icons)*/
+}
+
+.skills li:not(.lang):hover { /* all except language */
+    font-weight: var(--fw-semi);
+}
+
+.skills h3:last-of-type {
+    margin-top: var(--margin-2);
+}
+
+.skills ul li img { /* image icons */
+    height: 25px;
+    margin-right: calc(var(--margin-1) * 0.6);
+}
+
+.skills ul li i { /* heart icons */
+    color: rgb(233, 30, 30);
+    margin-left: var(--margin-1);
+    transition: var(--tran-03);
+}
+
+@keyframes beats { /* for the heart beat animation */
+    from { transform: none; }
+    50% { transform: scale(1.2); }
+    to { transform: none; }
+}
+
+.skills i:hover{
+    animation: beats 0.7s infinite;
 }
 
 /* experience and studies */
@@ -414,4 +414,222 @@ h4 {
 .proyects .course span {
     font-size: calc(var(--font-small) - 2px);
     font-weight: var(--fw-medium);
+}
+
+@media screen and (max-width: 425px) {
+    :root{
+        /* sizes, spacing */
+    --font-normal: 14px; 
+    --font-small: 13px;
+    --font-smaller: 12px;
+    --font-big: 15px;
+    --font-bigger: 16px;
+    --font-title-1: 30px;
+
+    --margin-1: 5px;
+    --margin-2: 10px;
+
+    --padding-1: 2px;
+    --padding-2: 4px;
+
+    --border-color-light: #4d185cb2;
+    }
+
+    .presentation {
+        height: 100vh;
+        flex-direction: column;
+    }
+
+    .presentation .image {
+        padding: calc(var(--padding-1) * 1.5);
+        margin-bottom: calc(var(--margin-2) * 4);
+    }
+
+    .presentation .info {
+        width: 80%;
+    }
+    
+    .info .titles {
+        margin-bottom: 0;
+    }
+
+    .titles .name {
+        font-size: var(--font-title-1);
+    }
+    
+    .description .about-me {
+        line-height: 0.9rem;
+        text-align: left;
+    }
+
+    .resume{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .resume h2 {
+        font-size: var(--font-bigger);
+        text-align: center;
+        margin-top: var(--margin-2);
+    }
+
+    .resume .content {
+        padding: var(--padding-2);
+        margin: var(--margin-1);
+    }
+
+    .resume .contact {
+        width: 100%;
+        border-bottom: 1px solid transparent;
+        -webkit-border-image: -webkit-linear-gradient(var(--border-gradient-x));
+        border-image: linear-gradient(var(--border-gradient-x));
+        border-image-slice: 1;
+    }
+
+    .contact .information {
+        font-size: var(--font-small);
+    }
+    
+    .information i {
+        font-size: var(--font-bigger);
+    }
+    
+    .information article {
+        font-weight: var(--fw-regular);
+
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    
+        margin: 5px;
+    }
+    
+    .information p {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+    
+    .information a {
+        border-bottom: 0;
+    }
+    
+    .information .location p {
+        margin: 0px;
+    }
+    
+    .information .social {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .information .social p {
+        margin: var(--margin-1);
+    }
+    
+    .information .social a i {
+        margin: var(--margin-1);
+    }
+
+    .resume .skills {
+        width: 100%;
+        
+        border-bottom: 1px solid transparent;
+        -webkit-border-image: -webkit-linear-gradient(var(--border-gradient-x));
+        border-image: linear-gradient(var(--border-gradient-x));
+        border-image-slice: 1;
+     }
+     
+     .skills h3 {
+         font-size: var(--font-small);
+         margin-top: var(--margin-2);
+         margin-bottom: var(--margin-2);
+     }
+
+     .skills ul {
+         margin: var(--margin-1);
+     }
+
+     .skills ul, h3 {
+         margin-left: calc(var(--margin-2) * 2);
+     }
+
+     .skills ul li {         
+         font-size: var(--font-small);     
+         margin: calc(var(--margin-1) * 1.5);
+     }
+
+     .skills .language {
+         margin-bottom: calc(var(--margin-2) * 3);
+     }
+     
+     .skills ul li img {
+         height: 30px;
+         margin-right: calc(var(--margin-2) * 2);
+     }
+    
+     .resume .studies {
+        width: 100%;
+
+        border-bottom: 1px solid transparent;
+        -webkit-border-image: -webkit-linear-gradient(var(--border-gradient-x));
+        border-image: linear-gradient(var(--border-gradient-x));
+        border-image-slice: 1;
+
+        padding-bottom: calc(var(--padding-2) * 5);
+    }
+    
+    .resume .studies p {
+        padding: calc(var(--margin-1) * 1.5);
+    }
+    
+    .studies .title {
+        font-size: var(--font-small);
+    }
+
+    .resume h2 {
+        margin-bottom: calc(var(--margin-2) * 2);
+    }
+    
+    .resume .experience {
+        width: 100%;
+        margin: 0;
+    }
+
+    .experience h2 {
+        margin: var(--margin-1);
+    }
+
+    .experience p {
+        padding: calc(var(--margin-1) * 1.5);
+    }
+    
+    .resume .proyects {
+        width: 100%;
+    }
+
+    .proyects h2 {
+        margin: calc(var(--margin-2) * 2);
+    }
+    
+    .proyects .final-proyects {
+        flex-direction: column;
+    }
+    
+    .final-proyects h4 {
+        margin: calc(var(--margin-1));
+    }
+    
+    .proyects .course {
+        margin: var(--margin-2);
+    }
+    
+    .proyects .course img {
+        width: 100%;
+        height: auto;
+        border: var(--border-style-1) var(--border-color-dark);
+    }
+    
 }
