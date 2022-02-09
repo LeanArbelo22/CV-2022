@@ -418,21 +418,16 @@ h4 {
 
 @media screen and (max-width: 425px) {
     :root{
-        /* sizes, spacing */
-    --font-normal: 14px; 
-    --font-small: 13px;
-    --font-smaller: 12px;
-    --font-big: 15px;
-    --font-bigger: 16px;
-    --font-title-1: 30px;
 
-    --margin-1: 5px;
-    --margin-2: 10px;
+        font-size: 15px;
 
-    --padding-1: 2px;
-    --padding-2: 4px;
+        --margin-1: 5px;
+        --margin-2: 10px;
 
-    --border-color-light: #4d185cb2;
+        --padding-1: 2px;
+        --padding-2: 4px;
+
+        --border-color-light: #4d185cb2;
     }
 
     .presentation {
@@ -449,16 +444,7 @@ h4 {
         width: 80%;
     }
     
-    .info .titles {
-        margin-bottom: 0;
-    }
-
-    .titles .name {
-        font-size: var(--font-title-1);
-    }
-    
     .description .about-me {
-        line-height: 0.9rem;
         text-align: left;
     }
 
@@ -472,7 +458,7 @@ h4 {
     .resume h2 {
         font-size: var(--font-bigger);
         text-align: center;
-        margin-top: var(--margin-2);
+        margin: var(--margin-2);
     }
 
     .resume .content {
@@ -481,43 +467,26 @@ h4 {
     }
 
     .resume .contact {
-        width: 100%;
+        /* width: 100%; */
         border-bottom: 1px solid transparent;
         -webkit-border-image: -webkit-linear-gradient(var(--border-gradient-x));
         border-image: linear-gradient(var(--border-gradient-x));
         border-image-slice: 1;
     }
-
-    .contact .information {
-        font-size: var(--font-small);
-    }
-    
-    .information i {
-        font-size: var(--font-bigger);
-    }
     
     .information article {
-        font-weight: var(--fw-regular);
-
         flex-direction: column;
         align-items: center;
-        gap: 5px;
-    
-        margin: 5px;
+        gap: 0px;
+        line-height: 1.5rem;
     }
     
     .information p {
-        display: flex;
-        flex-direction: row;
         gap: 10px;
     }
     
     .information a {
         border-bottom: 0;
-    }
-    
-    .information .location p {
-        margin: 0px;
     }
     
     .information .social {
@@ -526,63 +495,42 @@ h4 {
     }
 
     .information .social p {
-        margin: var(--margin-1);
-    }
-    
-    .information .social a i {
-        margin: var(--margin-1);
+        margin: var(--margin-2);
     }
 
     .resume .skills {
         width: 100%;
-        
-        border-bottom: 1px solid transparent;
-        -webkit-border-image: -webkit-linear-gradient(var(--border-gradient-x));
-        border-image: linear-gradient(var(--border-gradient-x));
-        border-image-slice: 1;
-     }
+        padding: calc(var(--padding-2) * 4);
+        border: 0;
+    }
      
-     .skills h3 {
-         font-size: var(--font-small);
-         margin-top: var(--margin-2);
-         margin-bottom: var(--margin-2);
-     }
+    .skills h3 {
+        margin: var(--margin-2) 0px var(--margin-2) calc(var(--margin-2) * 2);
+        font-size: var(--font-normal);
+    }
 
-     .skills ul {
-         margin: var(--margin-1);
-     }
-
-     .skills ul, h3 {
-         margin-left: calc(var(--margin-2) * 2);
-     }
-
-     .skills ul li {         
-         font-size: var(--font-small);     
+    .skills ul li { 
+         font-size: var(--font-small);            
          margin: calc(var(--margin-1) * 1.5);
-     }
-
-     .skills .language {
-         margin-bottom: calc(var(--margin-2) * 3);
-     }
+    }
      
      .skills ul li img {
          height: 30px;
-         margin-right: calc(var(--margin-2) * 2);
+         margin-right: calc(var(--margin-2) * 1.5);
      }
     
      .resume .studies {
-        width: 100%;
-
         border-bottom: 1px solid transparent;
+        border-top: 1px solid transparent;
         -webkit-border-image: -webkit-linear-gradient(var(--border-gradient-x));
         border-image: linear-gradient(var(--border-gradient-x));
         border-image-slice: 1;
 
-        padding-bottom: calc(var(--padding-2) * 5);
+        padding: calc(var(--padding-2) * 6);
     }
     
     .resume .studies p {
-        padding: calc(var(--margin-1) * 1.5);
+        padding: var(--margin-1);
     }
     
     .studies .title {
@@ -592,24 +540,11 @@ h4 {
     .resume h2 {
         margin-bottom: calc(var(--margin-2) * 2);
     }
-    
-    .resume .experience {
-        width: 100%;
-        margin: 0;
-    }
-
-    .experience h2 {
-        margin: var(--margin-1);
-    }
 
     .experience p {
-        padding: calc(var(--margin-1) * 1.5);
+        padding: calc(var(--margin-1) * 4);
     }
     
-    .resume .proyects {
-        width: 100%;
-    }
-
     .proyects h2 {
         margin: calc(var(--margin-2) * 2);
     }
