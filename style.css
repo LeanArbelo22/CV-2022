@@ -472,7 +472,7 @@ h4 {
     }
 
     .resume .contact {
-        /* width: 100%; */
+        width: 100%;
         border-bottom: 1px solid transparent;
         -webkit-border-image: -webkit-linear-gradient(var(--border-gradient-x));
         border-image: linear-gradient(var(--border-gradient-x));
@@ -504,7 +504,7 @@ h4 {
     }
 
     .information .location {
-        font-size: calc(var(--font-normal) - 1px);
+        font-size: calc(var(--font-normal) - 2px);
     }
 
     .resume .skills {
@@ -553,7 +553,7 @@ h4 {
     .proyects h2 {
         margin: calc(var(--margin-2) * 2);
     }
-    
+
     .proyects .final-proyects {
         flex-direction: column;
     }
