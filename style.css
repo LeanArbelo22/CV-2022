@@ -448,6 +448,10 @@ h4 {
         text-align: left;
     }
 
+    .profession {
+        font-size: var(--font-normal);
+    }
+
     .resume{
         width: 100%;
         display: flex;
@@ -459,6 +463,7 @@ h4 {
         font-size: var(--font-bigger);
         text-align: center;
         margin: var(--margin-2);
+        margin-bottom: calc(var(--margin-2) * 2);
     }
 
     .resume .content {
@@ -539,10 +544,6 @@ h4 {
     
     .studies .title {
         font-size: var(--font-small);
-    }
-
-    .resume h2 {
-        margin-bottom: calc(var(--margin-2) * 2);
     }
 
     .experience p {
