@@ -190,7 +190,7 @@ h4 {
     grid-template-areas: 
     "skills contact contact"
     "skills studies experience"
-    "skills proyects proyects";
+    "skills projects projects";
 }
 
 .resume h2 {
@@ -363,14 +363,14 @@ h4 {
     color: var(--text-color-3);
 }
 
-/* college proyects */
-.resume .proyects {
+/* college projects */
+.resume .projects {
     height: fit-content;
 
     display: flex;
     flex-direction: column;
 
-    grid-area: proyects;
+    grid-area: projects;
 
     border-top: 1px solid transparent;
     -webkit-border-image: -webkit-linear-gradient(var(--border-gradient-x));
@@ -378,7 +378,7 @@ h4 {
     border-image-slice: 1;
 }
 
-.proyects .final-proyects {
+.projects .final-projects {
     width: 100%;
     height: 290px;
     display: flex;
@@ -386,32 +386,32 @@ h4 {
     /* flex-wrap: wrap; this will work with a width superior to 100%*/
 }
 
-.final-proyects h4 {
+.final-projects h4 {
     text-align: center;
     margin-bottom: calc(var(--margin-1) / 2);
 }
 
-.proyects .course {
+.projects .course {
     margin: var(--margin-1);
 }
 
-.proyects .course img {
+.projects .course img {
     width: 100%;
     height: 210px;
     border: var(--border-style-1) var(--border-color-dark);
     transition: var(--tran-02);
 }
 
-.proyects .course img:hover {
+.projects .course img:hover {
     transform: scale(1.02);
     outline: var(--border-style-1) var(--border-color-dark);
 }
 
-.proyects .course p {
+.projects .course p {
     font-size: calc(var(--font-smaller) - 2px);
 }
 
-.proyects .course span {
+.projects .course span {
     font-size: calc(var(--font-small) - 2px);
     font-weight: var(--fw-medium);
 }
@@ -550,26 +550,86 @@ h4 {
         padding: calc(var(--margin-1) * 4);
     }
     
-    .proyects h2 {
+    .projects h2 {
         margin: calc(var(--margin-2) * 2);
     }
 
-    .proyects .final-proyects {
+    .projects .final-projects {
         flex-direction: column;
     }
     
-    .final-proyects h4 {
+    .final-projects h4 {
         margin: var(--margin-1);
     }
     
-    .proyects .course {
+    .projects .course {
         margin: var(--margin-2);
     }
     
-    .proyects .course img {
+    .projects .course img {
         width: 100%;
         height: auto;
         border: var(--border-style-1) var(--border-color-dark);
     }
     
+}
+
+@media screen and (min-width: 426px) and (max-width:768px) {
+    .presentation {
+        height: 100vh;
+        flex-direction: row;
+    }
+
+    .presentation .image {
+        width: 180px;
+        height: 180px;
+        padding: calc(var(--padding-1) * 2);
+    }
+
+    .presentation .info {
+        width: 50%;
+    }
+    
+    .description .about-me {
+        text-align: left;
+    }
+
+    .profession {
+        font-size: var(--font-normal);
+    }
+
+    .resume{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .resume h2 {
+        font-size: var(--font-bigger);
+        text-align: center;
+        margin: var(--margin-2);
+        margin-bottom: calc(var(--margin-2) * 2);
+    }
+
+    .resume .contact {
+        border: 0;
+    }
+
+    .resume .skills {
+        border: 0;
+    }
+
+    .skills .flex-tablet {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        flex-wrap: nowrap;
+        gap: 20px;
+    }
+
+    .flex-tablet h3 {
+        display: none;
+    }
+
 }
