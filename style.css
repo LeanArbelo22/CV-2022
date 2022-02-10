@@ -583,7 +583,7 @@ h4 {
     .presentation .image {
         width: 180px;
         height: 180px;
-        padding: calc(var(--padding-1) * 2);
+        padding: calc(var(--padding-1) * 1.7);
     }
 
     .presentation .info {
@@ -594,22 +594,22 @@ h4 {
         text-align: left;
     }
 
-    .profession {
-        font-size: var(--font-normal);
-    }
-
     .resume{
         width: 100%;
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
         align-items: center;
     }
 
-    .resume h2 {
+    h2 {
         font-size: var(--font-bigger);
         text-align: center;
-        margin: var(--margin-2);
         margin-bottom: calc(var(--margin-2) * 2);
+    }
+
+    .contact h2 {
+        margin-top: var(--margin-2);    
     }
 
     .resume .contact {
@@ -630,6 +630,10 @@ h4 {
 
     .flex-tablet h3 {
         display: none;
+    }
+    
+    .resume .projects {
+        border: 0;
     }
 
 }
